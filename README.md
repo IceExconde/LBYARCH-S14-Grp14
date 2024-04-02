@@ -13,4 +13,6 @@ This project contains two kernels in a (1) C program and (2) an x86-64 assembly 
 ![image](https://github.com/IceExconde/LBYARCH-S14-Grp14/assets/120188260/80ac6a05-85c5-42b8-9ab0-eedc9fa1b533)
 
 ## Comparative Analysis of Results
-Both C and x86-64 kernels ran 30 times for each vector size N of 2<sup>20</sup>, 2<sup>24</sup>, and 2<sup>28</sup>, as 2<sup>28</sup> was the largest size of N that the machine could handle. They were also checked for both "Release" and "Debug" mode. It can be seen that as the size of N increases, the average time for the kernels to finish also increases. This means that the value of N and the averaage time are positively correlated.
+Both C and x86-64 kernels ran 30 times for each vector size N of 2<sup>20</sup>, 2<sup>24</sup>, and 2<sup>28</sup>, the largest size of N that the machine could handle. They were also checked for both "Release" and "Debug" mode. It can be seen that as the size of N increases, the average time for the kernels to finish also increases. This means that the value of N and the averaage time are positively correlated.
+
+
