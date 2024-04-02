@@ -15,4 +15,5 @@ This project contains two kernels in a (1) C program and (2) an x86-64 assembly 
 ## Comparative Analysis of Results
 Both C and x86-64 kernels ran 30 times for each vector size N of 2<sup>20</sup>, 2<sup>24</sup>, and 2<sup>28</sup>, the largest size of N that the machine could handle. They were also checked for both "Release" and "Debug" mode. It can be seen that as the size of N increases, the average time for the kernels to finish also increases. This means that the value of N and the averaage time are positively correlated.
 
+For the C kernel, it can be seen that the Release mode is consistently faster than the Debug versions of the C version. Inveresly, except for N = 2<sup>20</sup>, the x86 kernel ran faster when it executed in Debug mode. Overall, the release version would usually run more efficiently because the Release version is optimized for execution while the Debug version contains more infomration for easier debugging. 
 
