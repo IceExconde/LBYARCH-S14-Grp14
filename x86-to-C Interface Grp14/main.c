@@ -13,9 +13,7 @@ void generate_random_vector(double* X, int n) {
     }
 }
 
-
 void display_results(double* Y, int n) {
-    printf("Results:\n");
     for (int i = 0; i < 10; ++i) {
         printf("%.2f ", Y[i]);
     }
@@ -23,7 +21,7 @@ void display_results(double* Y, int n) {
 }
 
 int main() {
-    const int n_values[] = { 20, 24, 30 }; // Sizes of n: 2^20, 2^24, 2^30
+    const int n_values[] = { 20, 24, 28 }; // Sizes of n: 2^20, 2^24, 2^30
     const int num_tests = 30;
 
     srand(time(NULL));
@@ -47,7 +45,7 @@ int main() {
         // Timing assembly version
         clock_t start_asm = clock();
         for (int i = 0; i < num_tests; ++i) {
-            stencil_kernel_asm(X, Y_asm, n); //adjust
+            stencil_kernel_asm(X, Y_asm, n);
         }
         clock_t end_asm = clock();
         double elapsed_asm = (double)(end_asm - start_asm) / CLOCKS_PER_SEC / num_tests;
@@ -61,6 +59,7 @@ int main() {
         display_results(Y_c, n);
         printf("ASM Version Results:\n");
         display_results(Y_asm, n);
+        printf("\n");
 
         free(X);
         free(Y_c);
