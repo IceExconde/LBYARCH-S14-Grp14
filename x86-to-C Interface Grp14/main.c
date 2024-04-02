@@ -3,7 +3,6 @@
 #include <time.h>
 #include <immintrin.h>
 
-// TODO: asm part
 extern void stencil_kernel_asm(double* X, double* Y, int n);
 
 void stencil_kernel_c(double* X, double* Y, int n);
@@ -13,6 +12,7 @@ void generate_random_vector(double* X, int n) {
         X[i] = (double)rand() / RAND_MAX;
     }
 }
+
 
 void display_results(double* Y, int n) {
     printf("Results:\n");
@@ -72,8 +72,7 @@ int main() {
 
 void stencil_kernel_c(double* X, double* Y, int n) {
     int i;
-    for (i = 3; i < n - 3; ++i) {
-        Y[i] = X[i - 3] + X[i - 2] + X[i - 1] + X[i] + X[i + 1] + X[i + 2] + X[i + 3];
+    for (i = 3; i < n - 3; i++) {
+        Y[i - 3] = X[i - 3] + X[i - 2] + X[i - 1] + X[i] + X[i + 1] + X[i + 2] + X[i + 3];
     }
->>>>>>> Stashed changes
 }
