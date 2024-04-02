@@ -7,6 +7,7 @@ This project contains two kernels in a (1) C program and (2) an x86-64 assembly 
 
 ## Outputs
 ### Debug mode for Vector sizes N = {2<sup>20</sup>, 2<sup>24</sup>, and  2<sup>28</sup>}
+![image](https://github.com/IceExconde/LBYARCH-S14-Grp14/assets/120188260/87350cd1-15b3-4309-a5d1-f0867123039f)
 
 ### Release mode for Vector sizes N = {2<sup>20</sup>, 2<sup>24</sup>, and  2<sup>28</sup>}
 
